@@ -1,0 +1,42 @@
+/* جعل الهيدر يتغير عند التمرير */
+header.sticky {
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.3s ease-in-out;
+}
+
+/* زر العودة للأعلى */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.scroll-top:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* تأثير ظهور العناصر عند التمرير */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
